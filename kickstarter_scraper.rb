@@ -6,7 +6,7 @@ require 'nokogiri'
 # title: project.css("h2.bbcard_name strong a").text
 # image link: project.css("div.project-thumbnail a img").attribute("src").value
 # description: project.css("p.bbcard_blurb").text
-# location: project.css("ul.project-meta")
+# location: project.css("ul.project-meta li a span.location-name").first.text
 
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
